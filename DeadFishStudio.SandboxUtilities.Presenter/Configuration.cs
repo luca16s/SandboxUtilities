@@ -2,6 +2,10 @@
 {
     public class Configuration
     {
-        public string Path { get; set; }
+        public string DirectoryPath { get; set; }
+        public string BranchName { get; set; }
+        public string RepositoryUrl { get; set; }
+        public string DatabaseProcess { get; set; }
+        public string SearchPattern { get; set; }
     }
 }
