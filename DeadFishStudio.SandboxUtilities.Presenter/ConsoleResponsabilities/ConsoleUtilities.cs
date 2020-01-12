@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace DeadFishStudio.SandboxUtilities.Presenter.ConsoleResponsabilities
 {
@@ -11,11 +10,11 @@ namespace DeadFishStudio.SandboxUtilities.Presenter.ConsoleResponsabilities
 
         public void InsertLineSeparator(string separator) => Console.WriteLine(separator);
 
-        public void ShowDefaultMessage(string message) => Console.WriteLine(message);
+        public void ShowMessage(string message) => Console.WriteLine(message);
 
         public void ShowErrorMessage(string message)
         {
-            ShowDefaultMessage(message);
+            ShowMessage(message);
             Console.Beep();
         }
 

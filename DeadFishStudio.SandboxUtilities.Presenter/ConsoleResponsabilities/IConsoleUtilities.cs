@@ -5,7 +5,7 @@
         void ChangeConsoleTitle(string title);
         void ClearConsole();
         void InsertLineSeparator(string separator);
-        void ShowDefaultMessage(string message);
+        void ShowMessage(string message);
         void Greetings();
     }
 }
