@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace DeadFishStudio.SandboxUtilities.Presenter.FolderResponsabilities
 {
@@ -18,6 +13,8 @@ namespace DeadFishStudio.SandboxUtilities.Presenter.FolderResponsabilities
 
             Directory.Delete(path);
         }
+
+        public bool FolderHasItems(string path, string searchPattern = null) => Directory.GetFiles(path, searchPattern).Length > 0;
 
         public bool SearchFolder(string path) => Directory.Exists(path);
     }
