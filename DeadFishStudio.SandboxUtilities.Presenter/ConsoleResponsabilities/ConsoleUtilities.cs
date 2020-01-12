@@ -37,5 +37,11 @@ namespace DeadFishStudio.SandboxUtilities.Presenter.ConsoleResponsabilities
 
             Console.WriteLine($"{date.DayOfWeek}, {date.Date.ToShortDateString()}.");
         }
+
+        public string ReadUserInput(string message)
+        {
+            ShowMessage(message);
+            return Console.ReadLine();
+        }
     }
 }

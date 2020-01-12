@@ -7,5 +7,6 @@
         void InsertLineSeparator(string separator);
         void ShowMessage(string message);
         void Greetings();
+        string ReadUserInput(string message);
     }
 }
