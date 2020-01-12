@@ -4,6 +4,6 @@ namespace DeadFishStudio.SandboxUtilities.PowerShellResponsabilities
 {
     public interface IPowerShellUtilities
     {
-        List<string> CallPowerShellCommandLine(string name, params string[] args);
+        List<string> CallPowerShellCommandLine(params string[] scripts);
     }
 }

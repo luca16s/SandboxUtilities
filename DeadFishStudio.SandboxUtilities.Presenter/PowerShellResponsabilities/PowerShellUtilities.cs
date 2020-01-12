@@ -6,17 +6,19 @@ namespace DeadFishStudio.SandboxUtilities.PowerShellResponsabilities
 {
     public class PowerShellUtilities : IPowerShellUtilities
     {
-        public List<string> CallPowerShellCommandLine(string name, params string[] args)
+        public List<string> CallPowerShellCommandLine(params string[] scripts)
         {
+            using var powerShell = PowerShell.Create();
             using var runspace = RunspaceFactory.CreateRunspace();
             runspace.Open();
-
-            using var powerShell = PowerShell.Create();
             powerShell.Runspace = runspace;
 
-            foreach (var arg in args)
+            powerShell.Streams.Warning.Clear();
+            powerShell.Streams.Error.Clear();
+
+            foreach (var script in scripts)
             {
-                powerShell.AddScript($"{name} {arg}");
+                powerShell.AddScript(script);
             }
 
             powerShell.Invoke();
